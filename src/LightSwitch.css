@@ -1,0 +1,90 @@
+Switch {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Switch::before {
+    align-items: center;
+    justify-content: center;
+    height: 1000vh;
+    width: 100vw;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #111c2b 0%, #353782 12%, #ff6687 28%, #ffb959 45%, #87e0fd 72%, #53cbf1 87%, #05abe0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111c2b', endColorstr='#05abe0',GradientType=0 );
+    /* IE6-9 */
+    transition: top 2.5s ease;
+}
+.Switch[data-time="day"]::before {
+    top: -900vh;
+}
+.Switch .Toggle {
+    margin:auto;
+    align-self: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgba(252, 250, 250, 0.125);
+    background: rgba(252, 250, 250, 0.05);
+    padding: 20px;
+    position: relative;
+    border-radius: 200px;
+}
+.Switch .Toggle[data-time='day'] .Buttoner {
+    left: 120px;
+    box-shadow: 0 0 10px 10px #FB5607;
+    border: 1px solid #fb5607 !important;
+    top: 25px;
+}
+.Switch .Toggle[data-time='day'] .Buttoner::before {
+    opacity: 1;
+}
+.Switch .Toggle .Buttoner {
+    height: 90px;
+    width: 90px;
+    background: yellow;
+    border-radius: 200px;
+    position: absolute;
+    pointer-events: none;
+    top: 20px;
+    left: 20px;
+    transition: left 2.5s ease, box-shadow 2.5s ease, border 2.5s ease, top 2.5s ease;
+    background: #EDDDD4;
+    /* Old browsers */
+    background: linear-gradient(135deg, #edddd4 0%, #fcfafa 50%, #edddd4 51%, #fcfafa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    box-shadow: 0 0 25px 5px #EDDDD4;
+    border: 5px solid rgba(237, 221, 212, 0.5);
+}
+.Switch .Toggle .Buttoner::before {
+    content: '';
+    height: 99px;
+    width: 99px;
+    background: red;
+    top: -5px;
+    left: -5px;
+    position: absolute;
+    border-radius: 200px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+    background: #FFFFFF;
+    /* Old browsers */
+    background: radial-gradient(ellipse at center, white 0%, #ffbe0b 50%, #fb5607 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    transition: opacity 2.5s ease;
+    opacity: 0;
+}
+
+

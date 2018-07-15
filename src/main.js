@@ -5,6 +5,7 @@ import AboutMe from "./aboutme";
 import Projects from "./projects";
 import Resume from "./resume";
 import navBar from "./navBar"
+import LightSwitch from "./LightSwitch";
 
 
 const NavRouter = () => (
@@ -13,6 +14,7 @@ const NavRouter = () => (
         <Route  path = "/aboutme" component={AboutMe}/>
         <Route path = "/projects" component={Projects}/>
         <Route path = "/resume" component ={Resume}/>
+        <Route path = "/switch" component ={LightSwitch}/>
     </Switch>
 )
 
