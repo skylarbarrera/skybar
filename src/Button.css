@@ -1,0 +1,26 @@
+
+.Button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 0.06em;
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s 0.04s ease, opacity 0.25s ease;
+}
+.Button:hover{
+    background: black;
+    color: white
+}
+
+.Button__white__black{
+    border: 2px solid #242526;
+    background: white;
+    box-shadow: 0 4px 14px 0 rgba(202, 202, 202, 0.39);
+    border-radius: 4px;
+    color: #242526;
+}

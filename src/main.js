@@ -1,12 +1,13 @@
 import React from 'react';
-import {Switch,Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import LandingPage from "./landingpage";
 import AboutMe from "./aboutme";
 import Projects from "./projects";
 import Resume from "./resume";
+import navBar from "./navBar"
 
 
-const Main = () => (
+const NavRouter = () => (
     <Switch>
         <Route exact path = "/" component={LandingPage} />
         <Route  path = "/aboutme" component={AboutMe}/>
@@ -15,4 +16,4 @@ const Main = () => (
     </Switch>
 )
 
-export default Main
+export default NavRouter
