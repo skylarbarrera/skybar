@@ -63,6 +63,7 @@ i{
     justify-content: space-between;
     align-content: center;
     margin: auto;
+    margin-right: 60px;
     flex-direction: row;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -70,7 +71,7 @@ i{
     overflow: scroll;
     perspective: 2000px;
     padding-bottom: 30px;
-    width: 60%;
+    width: 70%;
 
 }
 @media screen and (max-width: 800px)
@@ -79,7 +80,7 @@ i{
 }
 
     .project-header{
-        color:#2182F7;
+        color:white;
         font-weight: 700;
         text-align: center;
         padding-top: 40px;

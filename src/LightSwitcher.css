@@ -1,13 +1,13 @@
 .Switcher {
     position: absolute;
-    
+
     width: 100vw;
     height: 100vh;
     display: flex;
     background: #121212;
     align-items: center;
     justify-content: center;
-    z-index: -1;
+
 }
 .Switcher::before {
     position: absolute;
@@ -27,8 +27,8 @@
     top: -800vh;
 }
 .Switcher .Toggler {
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
