@@ -1,12 +1,16 @@
 .Card {
     overflow: hidden;
     position: relative;
-    background: #ffffff;
+    background: #fdfdfd;
     box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     box-sizing: border-box;
-    width: 350px
-
+    width: 350px;
+    min-width: 225px;
+    max-width: 350px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 90px;
 
 }
 
@@ -63,7 +67,7 @@ text-decoration: none;
     left: 0;
     right: 0;
     margin: auto;
-    width: 150px;
+    width: 30%;
     padding-left: 0;
     padding-right: 0;
 

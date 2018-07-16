@@ -8,7 +8,7 @@ class RCard extends Component {
         return (
 
 
-                <div>
+
 
                 <div className='Card' >
                     <a className='Card__box' href={"https://wcwm.wm.edu/" } target="_blank">
@@ -28,7 +28,7 @@ class RCard extends Component {
                     </a>
                 </div>
 
-                </div>
+
 
 
 

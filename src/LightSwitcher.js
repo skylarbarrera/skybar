@@ -1,8 +1,8 @@
-import  React, { Component ,Text,Link} from 'react';
-import "./LightSwitch.css"
+import React, { Component ,Text,Link} from 'react';
+import "./LightSwitcher.css"
 
 
-class LightSwitch extends Component{
+class LightSwitcher extends Component{
     constructor(){
         super();
 
@@ -19,13 +19,12 @@ class LightSwitch extends Component{
             this.setState({time: 'night'});
         }
     }
-
     render() {
         return (
 
-                        <div className='Switch' data-time={this.state.time}>
-                        <Toggle onClick={this.handleClick} time={this.state.time} />
-                        </div>
+            <div className='Switcher' data-time={this.state.time}>
+                <Toggle onClick={this.handleClick} time={this.state.time} />
+            </div>
 
 
         )
@@ -35,7 +34,7 @@ class LightSwitch extends Component{
 class Toggle extends Component{
     render() {
         return (
-            <div onClick={this.props.onClick} data-time={this.props.time} className="Toggle">
+            <div onClick={this.props.onClick} data-time={this.props.time} className="Toggler">
                 <Buttoner />
             </div>
         )
@@ -44,8 +43,8 @@ class Toggle extends Component{
 
 class Buttoner extends Component{
     render() {
-        return <div className="Buttoner"></div>
+        return <div className="Buttoners"></div>
     }
 };
 
-export default LightSwitch;
+export default LightSwitcher;

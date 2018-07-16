@@ -1,54 +1,68 @@
 import React, { Component ,Text} from 'react';
-import {Layout,Header, Navigation,Drawer,Content,Grid,Cell,Card,CardTitle,CardActions,CardText,CardMenu,Button, IconButton} from 'react-mdl';
-import './navBar.css';
+
+import './landingpage.css';
 import RCard from './Card';
+import LightSwitcher from "./LightSwitcher";
+
+var extraskills = {/*
+<i className="devicon-html5-plain"></i>
+< i
+className = "devicon-css3-plain" > < /i>
+<i className="devicon-git-plain"></i>
+< i
+className = "devicon-sourcetree-plain" > < /i>
+<i className="devicon-php-plain"></i>
+*/}
 
 class LandingPage extends Component {
     render() {
         return (
+            <div>
 
-            <Layout >
-                <Header transparent title="Skylar Barrera" className ='header-color'>
-                    <Navigation>
-                        <a href="./resume">Resume</a>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                    </Navigation>
-                </Header>
-                <Drawer title="Title">
-                    <Navigation>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                    </Navigation>
-                </Drawer>
-                <div style = {{ width: '80%', margin: 'auto'}}>
-                    <Grid >
-                        <Cell col={12}>
-                            <img className={"avatar-img"} src={"https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png"}/>
-                            <div className={"banner-text"}>
-                                <h1>Full Stack Web Developer</h1>
-                                <hr/>
-                                <p>
-                                    React Native | React | NodeJS
-                                </p>
-                            </div>
-                        </Cell>
+                <LightSwitcher/>
+                <div className={'cover-container'}>
+                    <div className={'cover-text-content'}>
+                        <h1  className={'cover-title'}>Skylar Barrera</h1>
+                        <h2 className={'cover-text'}> Computer Science Student @ William & Mary</h2>
+                        <div className={'skills-list'}>
 
 
-                        <Cell col={4}>
-                           <RCard></RCard>
+                            <i className="devicon-python-plain"></i>
+                            <i className="devicon-c-line"></i>
+                            <i className="devicon-cplusplus-line"></i>
+                            <i className="devicon-javascript-plain"></i>
+                            <i className="devicon-nodejs-plain"></i>
+                            <i className={"devicon-react-original"}></i>
+                            <i className={'icon ion-md-add'} style={{fontSize: '2em'}}></i>
 
 
 
-                        </Cell>
-                    </Grid>
+                        </div>
+                    </div>
+                <div className={ 'cover-image-content'}>
+                    <img className={'northern', 'animation-shimerring'} src={'https://isora.me/hire-me/img/etc/northern_lights.png'}/>
 
                 </div>
-                <Content />
-            </Layout>
+
+            </div>
+            <div style={{display: 'flex', flexDirection: 'row', position: 'relative'}}>
+                <div style={{width: '40%', backgroundColor: 'transparent'}}>
+                    <h2 className={'project-header'}>FEATURED PROJECTS</h2>
+                    <h3 className={'project-header'}> OTHER PROJECTS </h3>
+
+                </div>
+            <div className={'project-gallery-container'}>
+                <RCard/>
+                <RCard/>
+                <RCard/>
+                <RCard/>
+                <RCard/>
+            </div>
+
+        </div>
+            </div>
+
+
 
         );
     }
