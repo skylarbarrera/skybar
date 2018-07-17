@@ -1,5 +1,5 @@
 .cover-container{
-    width: 100%;
+
     height: 60%;
     background-color: transparent;
     display: flex;
@@ -17,20 +17,32 @@
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0 auto;
-    padding: 100px 80px;
-    min-width: 200px;
+    margin: auto;
+    padding: 120px 60px;
+
 
 }
-@media screen and (max-width: 550px)
-    .cover-text-content {
-        padding: 120px 50px;
-    }
-    @media screen and (max-width: 630px)
-        .cover-text-content {
-            padding: 120px 70px;
-
-        }
+@media only screen and (max-width: 800px) {
+    [.cover-container] {
+    width: 10%;
+}
+}
+.profile-image{
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 100px;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 10s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-name: change_color;
+    animation-play-state: running;
+    animation-timing-function: ease;
+}
 
 .cover-title{
     color: #FFFFFF;
@@ -42,11 +54,14 @@
     color: #FFFFFF;
     font-weight: 300;
 }
-
+.skills-list{
+    min-width: 400px;
+}
 i{
      font-size: 2em ;
      color: white;
      padding-right: 20px;
+
 
  }
 .icon{
@@ -63,15 +78,14 @@ i{
     justify-content: space-between;
     align-content: center;
     margin: auto;
-    margin-right: 60px;
     flex-direction: row;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     overflow: scroll;
-    perspective: 2000px;
+
     padding-bottom: 30px;
-    width: 70%;
+    max-width: 1200px;
 
 }
 @media screen and (max-width: 800px)
@@ -96,97 +110,29 @@ i{
 
 }
 .northern{
-    animation-delay:
-            0s
-;
-    animation-direction:
-            normal
-;
-    animation-duration:
-            10s
-;
-    animation-fill-mode:
-            none
-;
-    animation-iteration-count:
-            infinite
-;
-    animation-name:
-            change_color
-;
-    animation-play-state:
-            running
-;
-    animation-timing-function:
-            ease
-;
-    bottom:
-            0px
-;
-    box-sizing:
-            border-box
-;
-    color:
-            rgb(255, 255, 255)
-;
-    display:
-            block
-;
-    font-family:
-            Lato, Helvetica, sans-serif
-;
-    font-size:
-            16px
-;
-    height:
-            336px
-;
-    line-height:
-            25.6px
-;
-    margin-bottom:
-            -82.5px
-;
-    margin-left:
-            0px
-;
-    margin-right:
-            0px
-;
-    margin-top:
-            -82.5px
-;
-    padding-bottom:
-            0px
-;
-    padding-left:
-            0px
-;
-    padding-right:
-            0px
-;
-    padding-top:
-            0px
-;
-    position:
-            absolute
-;
-    right:
-            -163.188px
-;
-    top:
-            0px
-;
-    width:
-            652px
-;
-    -webkit-font-smoothing:
-            antialiased
-;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 10s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-name: change_color;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 336px;
+    line-height: 25.6px;
+    margin-bottom: -82.5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    position: center;
+    right: -163.188px;
+    top: 0px;
+    width: 652px;
+    z-index: 0;
 }
 
-.animation-shimerring {
-    animation: change_color 10s ease infinite; }
 
 @keyframes change_color {
     0% {

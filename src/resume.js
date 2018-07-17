@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import LightSwitcher from "./LightSwitcher";
-import RCard from './Card'
+import NavB from './navBar.js'
 
 class Resume extends Component {
     render() {
         return (
-           <LightSwitcher></LightSwitcher>
+
+                <NavB></NavB>
+
 
         );
     }

@@ -1,14 +1,21 @@
 import React, { Component ,Text,Link} from 'react';
-import {Layout} from 'react-mdl';
 import './Card.css';
-import Button from "./Button"
+import Button from "./Button";
+import {StyleSheet, css} from 'aphrodite';
+
+var styles = StyleSheet.create( {
+    base: {
+        background: 'blue',
+        border: 0,
+        borderRadius: 4,
+        color: 'white',
+        padding: '1.5em'
+    }
+});
 
 class RCard extends Component {
     render() {
         return (
-
-
-
 
                 <div className='Card' >
                     <a className='Card__box' href={"https://wcwm.wm.edu/" } target="_blank">

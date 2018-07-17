@@ -1,6 +1,6 @@
 .Switcher {
     position: absolute;
-
+    overflow: no-content;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,6 +10,7 @@
 
 }
 .Switcher::before {
+    overflow: no-display;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -23,7 +24,7 @@
     /* IE6-9 */
     transition: top 2.5s ease;
 }
-.Switcher[data-time="day"]::before {
+.Switcher[data-time="Sun"]::before {
     top: -800vh;
 }
 .Switcher .Toggler {
@@ -31,33 +32,34 @@
     right: 20px;
     z-index: 1;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+    width: 30px;
     height: 75px;
-    border: 3px solid rgba(252, 250, 250, 0.125);
-    background: rgba(252, 250, 250, 0.05);
+    border: 0px solid rgba(252, 250, 250, 0.125);
+    background: rgba(252, 250, 250, 0.00);
     position: absolute;
     padding: 10px;
     border-radius: 200px;
 }
-.Switcher .Toggler[data-time='day'] .Buttoners {
-    left: -2.5px;
+.Switcher .Toggler[data-time='Sun'] .Buttoners {
+    opacity: 1;
     box-shadow: 0 0 10px 10px #FB5607;
     border: 1px solid #fb5607 !important;
-    top: 0px;
+    top: 10px;
 }
-.Switcher .Toggler[data-time='day'] .Buttoners::before {
+.Switcher .Toggler[data-time='Sun'] .Buttoners::before {
     opacity: 1;
 }
 .Switcher .Toggler .Buttoners {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
     background: yellow;
     border-radius: 40px;
-    position: relative;
-    top: 40px;
-    left:-7.5px;
-    transition: left 2.5s ease, box-shadow 2.5s ease, border 2.5s ease, top 2.5s ease;
+    position: absolute;
+    top: 150vh;
+    left:0px;
+    transition: opacity 2.5s ease, box-shadow 2.5s ease, border 2.5s ease, top 2.5s ease;
     background: #EDDDD4;
     /* Old browsers */
     background: linear-gradient(135deg, #edddd4 0%, #fcfafa 50%, #edddd4 51%, #fcfafa 100%);
@@ -66,15 +68,16 @@
     /* IE6-9 fallback on horizontal gradient */
     box-shadow: 0 0 25px 5px #EDDDD4;
     border: 5px solid rgba(237, 221, 212, 0.5);
+    opacity: 0;
 }
 .Switcher .Toggler .Buttoners::before {
     content: '';
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background: red;
-    top: 75px;
-    left: -2.5px;
-    position: relative;
+    top: 0px;
+    left: 0px;
+    position: absolute;
     border-radius: 40px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
     background: #FFFFFF;
@@ -86,5 +89,67 @@
     transition: opacity 2.5s ease;
     opacity: 0;
 }
+
+
+
+
+
+
+
+
+
+
+.Switcher .Toggler[data-time='Sun'] .ButtonersMoon {
+    opacity: 0;
+    top: 100vh;
+}
+.Switcher .Toggler[data-time='Sun'] .ButtonersMoon::before {
+    opacity: 1;
+}
+.Switcher .Toggler .ButtonersMoon {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    background: yellow;
+    border-radius: 40px;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    transition: left 2.5s ease, opacity 2.5s ease, border 2.5s ease, top 2.5s ease;
+    background: #EDDDD4;
+    /* Old browsers */
+    background: linear-gradient(135deg, #edddd4 0%, #fcfafa 50%, #edddd4 51%, #fcfafa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    box-shadow: 0 0 25px 5px #EDDDD4;
+    border: 5px solid rgba(237, 221, 212, 0.5);
+}
+
+
+.DaySun-Press{
+    position: absolute;
+    top: -10px;
+    left: -150px;
+    color: transparent;
+    font-weight: 600;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.DaySun-Press:hover{
+    color: white;
+}
+
+.Toggler[data-time='Sun'] .DaySun-Press:hover{
+    color: #FD8213;
+    top: -5px;
+    left: -150px;
+}
+
+
+
+
 
 

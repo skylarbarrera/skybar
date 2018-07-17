@@ -7,16 +7,16 @@ class LightSwitcher extends Component{
         super();
 
         this.state = {
-            time: 'night'
+            time: 'Moon'
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        if(this.state.time === 'night') {
-            this.setState({time: 'day'});
+        if(this.state.time === 'Moon') {
+            this.setState({time: 'Sun'});
         } else {
-            this.setState({time: 'night'});
+            this.setState({time: 'Moon'});
         }
     }
     render() {
@@ -35,16 +35,29 @@ class Toggle extends Component{
     render() {
         return (
             <div onClick={this.props.onClick} data-time={this.props.time} className="Toggler">
-                <Buttoner />
+                <h4 className={'DaySun-Press'}>Press the {this.props.time}></h4>
+                <Buttoners/>
+                <ButtonersMoon/>
+
             </div>
         )
     }
 };
 
-class Buttoner extends Component{
+class Buttoners extends Component{
     render() {
-        return <div className="Buttoners"></div>
+        return <div>
+
+            <div className="Buttoners"></div>
+        </div>
     }
 };
+
+class ButtonersMoon extends Component{
+    render() {
+        return <div className="ButtonersMoon"></div>
+    }
+};
+
 
 export default LightSwitcher;

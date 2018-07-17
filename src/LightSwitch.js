@@ -37,6 +37,7 @@ class Toggle extends Component{
         return (
             <div onClick={this.props.onClick} data-time={this.props.time} className="Toggle">
                 <Buttoner />
+                <ButtonerMoon/>
             </div>
         )
     }
@@ -44,8 +45,18 @@ class Toggle extends Component{
 
 class Buttoner extends Component{
     render() {
-        return <div className="Buttoner"></div>
+        return  <div>
+            <h4 style={{position: 'absolute', top: 20, left: 20, color: 'white'}}>Press Me</h4>
+        <div className="Buttoner"></div>
+        </div>
     }
 };
+
+class ButtonerMoon extends Component{
+    render() {
+        return <div className="ButtonerMoon"></div>
+    }
+};
+
 
 export default LightSwitch;
