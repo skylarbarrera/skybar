@@ -1,0 +1,144 @@
+@keyframes change_color {
+    0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg); }
+    100% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg); } }
+
+coverContainer:{
+
+    height: '60%',
+    backgroundColor: 'transparent',
+    display: 'flex',
+    overflow: 'hidden',
+    position: 'relative',
+
+},
+
+coverTextContent:{
+    display: '-webkit-box',
+    display: '-ms-flexbox',
+    display: 'flex',
+    '-webkit-box-orient': 'vertical',
+    '-webkit-box-direction': 'normal',
+    '-ms-flex-direction': 'column',
+    flexDirection:'column',
+    justifyContent: 'space-around',
+    margin: 'auto',
+    padding: '120px 60px',
+
+
+},
+
+
+profileImage:{
+    top: '20px'
+    left: '20px';,height: 60px;
+    width: '60px',
+    position: 'absolute',
+    borderRadius: '100px',
+    'animation-delay': '0s',
+    'animation-direction': 'normal',
+    'animation-duration': '10s',
+    'animation-fill-mode': 'none',
+    'animation-iteration-count': 'infinite',
+    'animation-name': 'change_color',
+    'animation-play-state': 'running',
+    'animation-timing-function': 'ease'
+},
+
+coverTitle:{
+    color: '#FFFFFF',
+    fontWeight: '500',
+
+},
+
+
+coverText:{
+    color: '#FFFFFF',
+    fontWeight: '300',
+},
+
+skillsList:{
+    minWidth: '400px',
+},
+i:{
+     fontSize: '2em' ,
+     color: 'white',
+     paddingRight: '20px',
+
+
+ },
+icon:{
+    fontSize: '20px' ,
+    color: 'white',
+    paddingRight: '20px'
+
+
+},
+
+
+projectGalleryContainer{
+    padding: '5% 0%',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    margin: 'auto',
+    flex-direction: 'row',
+    display: '-webkit-box',
+    display: '-ms-flexbox',
+    display: 'flex',
+    overflow: 'scroll',
+
+    paddingBottom: '30px',
+    maxWidth: '1200px',
+
+},
+
+
+projectHeader{
+    color: 'white';
+    fontWeight: '700';
+    textAlign: 'center';
+    paddingTop: '40px';
+    },
+
+thirdSection{
+    width:'100%',
+    height: '900px',
+    backgroundColor: '#353782',
+    content: 'none',
+
+},
+northern{
+    'animation-delay': '0s',
+    'animation-direction': 'normal',
+    'animation-duration': '10s',
+    'animation-fill-mode': 'none',
+    'animation-iteration-count': 'infinite',
+    'animation-name': 'change_color',
+    'animation-play-state': 'running',
+    'animation-timing-function': 'ease',
+    boxSizing: 'border-box',
+    color: 'rgb(255, 255, 255)',
+    height: '336px',
+    lineHeight: '25.6px',
+    marginBottom: '-82.5px',
+    marginLeft: '100px',
+    marginRight: '100px',
+    marginTop: '100px',
+    position: 'center',
+    right: '-163.188px',
+    top: '0px',
+    width: '652px',
+    zIndex: '0';,
+},
+
+
+@keyframes change_color {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg); }
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg); } }

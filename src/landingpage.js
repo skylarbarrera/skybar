@@ -1,70 +1,271 @@
 import React, { Component ,Text} from 'react';
 
-import './landingpage.css';
 import RCard from './Card';
 import LightSwitcher from "./LightSwitcher";
 import navBar from './navBar';
+import './landingpage.css';
+import {StyleSheet, css} from 'aphrodite';
 
-var extraskills = {/*
-<i className="devicon-html5-plain"></i>
-< i
-className = "devicon-css3-plain" > < /i>
-<i className="devicon-git-plain"></i>
-< i
-className = "devicon-sourcetree-plain" > < /i>
-<i className="devicon-php-plain"></i>
-*/}
+var styles = StyleSheet.create({
+    coverContainer:{
+        width: '100%',
+        height: '60%',
+        backgroundColor: 'transparent',
+        display: 'flex',
+        overflow: 'no-content',
+        position: 'relative',
+        alignSelf: 'center',
+        margin: 'auto',
+        '@media (max-width: 600px)':{
+            width: '80%',
+
+
+        }
+    },
+
+    coverTextContent:{
+        alignItems: 'center',
+        '-webkit-box-orient': 'vertical',
+        '-webkit-box-direction': 'normal',
+        '-ms-flex-direction': 'column',
+        flexDirection:'column',
+        margin: 'auto',
+        padding: '120px 0px',
+        overflow: 'auto',
+        width: '60%',
+        borderBottomWidth: '5px',
+        borderColor: 'white',
+
+        '@media (max-width: 600px)':{
+            width: '100%',
+            padding: '0px 0 px'
+
+
+        }
+
+
+    },
+
+
+    profileImage:{
+        top: '20px',
+        left: '20px',
+        height: '60px',
+        width: '60px',
+        position: 'absolute',
+        borderRadius: '100px',
+        'animation-delay': '0s',
+        'animation-direction': 'normal',
+        'animation-duration': '10s',
+        'animation-fill-mode': 'none',
+        'animation-iteration-count': 'infinite',
+        'animation-name': 'change_color',
+        'animation-play-state': 'running',
+        'animation-timing-function': 'ease',
+        '@media (max-width: 600px)':{
+
+
+
+        }
+},
+
+coverTitle:{
+        width: '100%',
+    color: '#FFFFFF',
+        fontWeight: '500',
+
+},
+
+
+coverText:{
+
+    color: '#FFFFFF',
+        fontWeight: '300',
+},
+
+skillsList:{
+
+    margin: 'auto'
+},
+skillsIcon:{
+    fontSize: '2em' ,
+    color: 'white',
+    paddingRight: '20px',
+
+
+
+
+},
+icon:{
+
+
+
+},
+
+
+projectGalleryContainer:{
+    padding: '5% 0%',
+
+        alignContent: 'center',
+        flexDirection: 'row',
+        display: '-webkit-box',
+        display: '-ms-flexbox',
+        display: 'flex',
+        overflow: 'scroll',
+        width: '60%',
+        paddingBottom: '30px',
+        maxWidth: '1200px',
+    margin: 'auto',
+    '@media (max-width: 600px)':{
+        width: '90%',
+        flexDirection: 'column'
+
+
+    }
+
+},
+
+
+projectHeader:{
+    color: 'white',
+    fontWeight: '700',
+    textAlign: 'center',
+    paddingTop: '40px',
+},
+
+thirdSection:{
+    width:'100%',
+        height: '900px',
+        backgroundColor: '#353782',
+        content: 'none',
+
+},
+northern:{
+        display: 'none',
+    'animation-delay': '0s',
+        'animation-direction': 'normal',
+        'animation-duration': '10s',
+        'animation-fill-mode': 'none',
+        'animation-iteration-count': 'infinite',
+        'animation-name': 'change_color',
+        'animation-play-state': 'running',
+        'animation-timing-function': 'ease',
+        boxSizing: 'border-box',
+        color: 'rgb(255, 255, 255)',
+        height: '336px',
+        lineHeight: '25.6px',
+        marginBottom: '-82.5px',
+        marginLeft: '100px',
+        marginRight: '100px',
+        marginTop: '100px',
+        position: 'center',
+        right: '-163.188px',
+        top: '0px',
+        width: '652px',
+        zIndex: '-1',
+        backgroundColor: 'transparent',
+    '@media (max-width: 600px)':{
+        display: 'none',
+
+    }
+},
+    projectsContainer: {
+        flexDirection: 'row',
+        width: '100%',
+            '@media (max-width: 600px)':
+        {
+            flexDirection: 'column',
+
+
+        }
+    },
+projectTextContainer:{
+        position: 'relative',
+        width: '100%',
+        display: 'flex',
+        margin: 'auto',
+        flexDirection: 'row',
+        '@media (max-width: 600px)':{
+         flexDirection: 'column',
+
+
+    }
+
+},
+
+sectionBreak:{
+        backgroundColor: 'white',
+        height: '50px',
+        borderBottom: '2px',
+        borderColor: 'black',
+        margin: 'auto',
+        width: '70%',
+        Zindex: '3',
+}
+
+
+
+
+});
 
 class LandingPage extends Component {
     render() {
         return (
-            <div>
-                <div style={{overflow: 'hidden'}}>
-                    <navBar></navBar>
+            <div style={{width: '100%'}}>
+                <div style={{overflow: 'hidden', }}>
                 <LightSwitcher/>
                 </div>
-                <div className={'cover-container'}>
-                    <div className={'cover-text-content'}>
-                        <img className={'profile-image'} src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
-                        <h1  className={'cover-title'}>Skylar Barrera</h1>
-                        <h2 className={'cover-text'}> Computer Science Student @ William & Mary</h2>
-                        <div className={'skills-list'}>
+                <img className={css(styles.profileImage)} src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
+                <div className={css(styles.coverContainer)}>
+                    <div className={css(styles.coverTextContent)}>
+
+                        <h1  className={css(styles.coverTitle)}>Skylar Barrera</h1>
+                        <h2 className={css(styles.coverText)}> Computer Science Student @ William & Mary</h2>
+                        <div className={css(styles.skillsList)}>
 
 
-                            <i className="devicon-python-plain"></i>
-                            <i className="devicon-c-line"></i>
-                            <i className="devicon-cplusplus-line"></i>
-                            <i className="devicon-javascript-plain"></i>
-                            <i className="devicon-nodejs-plain"></i>
-                            <i className={"devicon-react-original"}></i>
-                            <i className={'icon ion-md-add'} style={{fontSize: '2em'}}></i>
+                            <i className={"devicon-python-plain"} style={{fontSize: '2em', color: 'white', paddingRight: '20px', '@media (max-width: 600px)':{
+                                    paddingRight: '10px',
+                                    fontSize: '1em'
+
+                                }}}></i>
+                            <i className="devicon-c-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className="devicon-cplusplus-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className="devicon-javascript-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className="devicon-nodejs-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className={'icon ion-md-add'} style={{fontSize: '2em', color: 'white', paddingRight: '20px', display: 'none'}}></i>
 
 
                         </div>
                     </div>
-                <div className={ 'cover-image-content'}>
-                    <img className={'northern'} src={'https://isora.me/hire-me/img/etc/northern_lights.png'}/>
+                <div className={css(styles.coverImageContent)}>
+                    <img className={css(styles.northern)} src={'https://isora.me/hire-me/img/etc/northern_lights.png'}/>
 
                 </div>
 
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', position: 'relative'}}>
-                <div style={{width: '40%', backgroundColor: 'transparent'}}>
-                    <h2 className={'project-header'}>FEATURED PROJECTS</h2>
-                    <h3 className={'project-header'}> OTHER PROJECTS FOUND ON</h3>
+             <div className={css(styles.sectionBreak)}>
+                 <span>poop</span>
+             </div>
+
+            <div className={css(styles.projectTextContainer)}>
+                <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
+                    <h2 className={css(styles.projectHeader)}>FEATURED PROJECTS</h2>
+                    <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
                     <i className="devicon-github-plain-wordmark" ></i>
 
                 </div>
-            <div className={'project-gallery-container'}>
-                <RCard/>
-                <RCard/>
-                <RCard/>
-                <RCard/>
-                <RCard/>
+                <div className={css(styles.projectGalleryContainer)}>
+                    <RCard/>
+                    <RCard/>
+                     <RCard/>
+
+                </div>
             </div>
 
         </div>
-            </div>
+
 
 
 
