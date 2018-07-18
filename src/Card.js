@@ -10,17 +10,20 @@ var styles = StyleSheet.create( {
         boxShadow: '0 2px 26px 0 rgba(0, 0, 0, 0.1)',
         borderRadius: '5px',
         boxSizing: 'border-box',
-        width: '100%',
-        minWidth: '225px',
+        width: '350px',
+        height: '300px',
+        minWidth: '275px',
         maxWidth: '350px',
         margin: 'auto',
-        display: 'inline-block',
+        display: 'flex',
         marginRight: '90px',
         '@media (max-width: 600px)':{
             marginRight: '0px',
             marginTop: '20px',
             flexDirection: 'column',
-            borderRadius: '10px'
+            borderRadius: '10px',
+            width: '300px',
+            height: '350px'
 
 
         }
@@ -30,28 +33,35 @@ var styles = StyleSheet.create( {
     cardBox:{
         textDecoration: 'none',
         color: '-webkit-link',
+        display: 'flex',
+        flexDirection: 'column'
 
     },
 
     cardImage:{
         width:'100%',
+        height: '60%'
     },
     cardInfo:{
-        padding: '12px 15px 20px 18px',
+        padding: '0px 0px 0px 10px',
+
+
 
     },
 
     cardTitle:{
-        marginBttom: '10px',
-        fontSize: '16px',
+        marginTop: '5px',
+        marginBottom: '10px',
+        fontSize: '18px',
         color: '#0065FF',
-        'font-family': '"Lato", Helvetica, sans-serif',
+
 
     },
 
     cardDescription:{
-        fontSize: '13px',
+        fontSize: '15px',
         color: 'rgba(32, 32, 32, 0.6)',
+        marginBottom: '10px'
 
     },
 
@@ -82,29 +92,38 @@ var styles = StyleSheet.create( {
         alignSelf: 'flex-end',
         top: '80px',
         margin: 'auto',
-        width: '30%',
-
+        width: '100%',
 
     }
 });
 
 class RCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: 'Title from props..',
+            content: 'Content from props..',
+            url: './',
+            gif: 'https://isora.me/hire-me/img/cases/trader0x_website_made.gif'
+        }
+    }
+
     render() {
         return (
 
                 <div className={css(styles.card) }>
-                    <a className={css(styles.cardBox) } href={"https://wcwm.wm.edu/" } target="_blank">
+                    <a className={css(styles.cardBox) } href={this.props.url } target="_blank">
                     <img className={css(styles.cardImage) } src={ 'https://isora.me/hire-me/img/cases/trader0x_website_made.gif'} >
                     </img>
                     <div className={css(styles.cardInfo) }>
-                        <h3 className={css(styles.cardTitle) }>WCWM</h3>
+                        <h3 className={css(styles.cardTitle) }>{this.props.title}</h3>
                           <div className={css(styles.cardDescription) } >
-                                Designed & Developed for WCWM, William & Mary's College Radio Station
+                              {this.props.content}
 
 
                         </div>
                         <div className={css(styles.cardHover) }>
-                            <Button />
+                            <Button   />
                         </div>
                     </div>
                     </a>

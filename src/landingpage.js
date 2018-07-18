@@ -17,7 +17,10 @@ var styles = StyleSheet.create({
         alignSelf: 'center',
         margin: 'auto',
         '@media (max-width: 600px)':{
-            width: '80%',
+            width: '90%',
+            'padding-left': '0px',
+            margin: 'auto',
+            textAlign: 'center'
 
 
         }
@@ -85,12 +88,13 @@ coverText:{
 
 skillsList:{
 
-    margin: 'auto'
+    margin: 'auto',
 },
 skillsIcon:{
     fontSize: '2em' ,
     color: 'white',
     paddingRight: '20px',
+
 
 
 
@@ -104,8 +108,7 @@ icon:{
 
 
 projectGalleryContainer:{
-    padding: '5% 0%',
-
+        padding: '5% 0%',
         alignContent: 'center',
         flexDirection: 'row',
         display: '-webkit-box',
@@ -115,10 +118,14 @@ projectGalleryContainer:{
         width: '60%',
         paddingBottom: '30px',
         maxWidth: '1200px',
-    margin: 'auto',
+        zIndex: 2,
+
+
     '@media (max-width: 600px)':{
-        width: '90%',
-        flexDirection: 'column'
+        width: '80%',
+        flexDirection: 'column',
+
+        margin: 'auto'
 
 
     }
@@ -134,7 +141,7 @@ projectHeader:{
 },
 
 thirdSection:{
-    width:'100%',
+        width:'100%',
         height: '900px',
         backgroundColor: '#353782',
         content: 'none',
@@ -194,16 +201,21 @@ projectTextContainer:{
 },
 
 sectionBreak:{
+        position: 'relative',
         backgroundColor: 'white',
-        height: '50px',
-        borderBottom: '2px',
-        borderColor: 'black',
+        height: '1px',
         margin: 'auto',
         width: '70%',
-        Zindex: '3',
+},
+
+noContent:{
+    '@media (max-width: 600px)':{
+        display:'none'
+
+
+    }
+
 }
-
-
 
 
 });
@@ -233,7 +245,7 @@ class LandingPage extends Component {
                             <i className="devicon-cplusplus-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
                             <i className="devicon-javascript-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
                             <i className="devicon-nodejs-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
-                            <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                            <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '0px'}}></i>
                             <i className={'icon ion-md-add'} style={{fontSize: '2em', color: 'white', paddingRight: '20px', display: 'none'}}></i>
 
 
@@ -245,21 +257,22 @@ class LandingPage extends Component {
                 </div>
 
             </div>
-             <div className={css(styles.sectionBreak)}>
-                 <span>poop</span>
-             </div>
+                <div className={css(styles.sectionBreak)}></div>
 
             <div className={css(styles.projectTextContainer)}>
                 <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
                     <h2 className={css(styles.projectHeader)}>FEATURED PROJECTS</h2>
                     <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
-                    <i className="devicon-github-plain-wordmark" ></i>
+                    <div style={{margin:'auto', width: '10%',}}>
+                        <i className="devicon-github-plain-wordmark" style={{fontSize: '4em', color: 'white', margin: 'auto', }}></i>
+                    </div>
+
 
                 </div>
                 <div className={css(styles.projectGalleryContainer)}>
-                    <RCard/>
-                    <RCard/>
-                     <RCard/>
+                    <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station'/>
+                    <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.'/>
+                     <RCard className={css(styles.noContent)}/>
 
                 </div>
             </div>
