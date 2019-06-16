@@ -2,7 +2,7 @@ import React, { Component ,Text} from 'react';
 
 import RCard from './Card';
 import LightSwitcher from "./LightSwitcher";
-import navBar from './navBar';
+import Resume from './resume';
 import './landingpage.css';
 import {StyleSheet, css} from 'aphrodite';
 
@@ -259,7 +259,10 @@ class LandingPage extends Component {
             </div>
                 <div className={css(styles.sectionBreak)}></div>
 
+
+
             <div className={css(styles.projectTextContainer)}>
+                
                 <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
                     <h2 className={css(styles.projectHeader)}>FEATURED PROJECTS</h2>
                     <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
@@ -275,9 +278,14 @@ class LandingPage extends Component {
                      <RCard className={css(styles.noContent)}/>
 
                 </div>
+
             </div>
 
+
+
         </div>
+
+
 
 
 
