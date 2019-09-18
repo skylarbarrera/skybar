@@ -1,5 +1,6 @@
 import React, { Component ,Text} from 'react';
 import './resume.css';
+import NavBar from './navBar';
 import {StyleSheet, css} from 'aphrodite';
 
 
@@ -45,11 +46,31 @@ var styles = StyleSheet.create( {
 
         }
     },
-    back:{
+    coverContainer:{
+       
+        width: '100%',
+        height: '60%',
+        backgroundColor: 'transparent',
+        display: 'flex',
+        overflow: 'no-content',
+        position: 'relative',
+        alignSelf: 'center',
+        margin: 'auto',
+        '@media (max-width: 600px)':{
+            width: '90%',
+            'padding-left': '0px',
+            margin: 'auto',
+            textAlign: 'center'
 
+
+        }
+    },
+    back:{
+        marginTop: '5%',
+        marginLeft: '10%',
         width: '100%',
         height: '100%',
-        backgroundColor: '#FDFDFD',
+        backgroundColor: 'transparent',
         alignItems: 'center'
 
 
@@ -63,7 +84,7 @@ var styles = StyleSheet.create( {
 
 
     },
-
+  
     navbarnav: {
         display: 'flex',
         textAlign: 'center',
@@ -111,7 +132,8 @@ var styles = StyleSheet.create( {
     contact:{ display: 'flex',
         flexDirection: 'row',
         fontFamily: 'Inconsolata',
-        fontSize: '10'},
+        fontSize: '10',
+        color: '#FFFFFF'},
 
      top:{
 
@@ -122,21 +144,23 @@ var styles = StyleSheet.create( {
         fontSize:'3em',
         color: '#2A85F4'},
     bio:{fontFamily: 'Inconsolata',
+    color: '#FFFFFF',
         fontSize: '10'
     },
 
      entry:{
-
+        color: '#FFFFFF',
          fontSize: '12',
 
      },
 
      date:{fontFamily: 'Inconsolata',
+        color: '#FFFFFF',
          fontSize: '10'
 },
      listItems:{
          fontSize: '10',
-         color: '#666666'
+         color: '#FFFFFF'
      },
 
 
@@ -147,7 +171,11 @@ var styles = StyleSheet.create( {
 class Resume extends Component {
     render() {
         return (
+            <div className={css(styles.coverContainer)}>
+            
+           
             <div className={css(styles.back)}>
+                
                 <div>
                     <h1 className={css(styles.name)}> Skylar Barrera</h1>
                     <h4  className={css(styles.bio)}> Computer Science Student focused on Software Development</h4>
@@ -179,7 +207,7 @@ class Resume extends Component {
                         RELEVENT EXPERIENCE
                     </h2>
 
-                    <h3>Web Master @ MacPaint</h3>
+                    <h3 style = {{color: 'white'}}>Web Master @ MacPaint</h3>
                     <text  className={css(styles.date)} > March – Nov 2017 // Newport News, VA</text>
                     <lu className={css(styles.listItems)}>
                         <ul >
@@ -198,7 +226,7 @@ class Resume extends Component {
 
 
 
-                    <h3>Web Designer & Developer @ WCWM Radio</h3>
+                    <h3 style = {{color: 'white'}}>Web Designer & Developer @ WCWM Radio</h3>
                     <text  className={css(styles.date)}> March – Nov 2017 // Williamsburg, VA</text>
                     <lu className={css(styles.listItems)}>
                         <ul>
@@ -211,7 +239,7 @@ class Resume extends Component {
                     </lu>
 
 
-                    <h3>Web Designer & Developer @ Rocket Mag</h3>
+                    <h3 style = {{color: 'white'}}>Web Designer & Developer @ Rocket Mag</h3>
                     <text  className={css(styles.date)}> March – Nov 2017 // Williamsburg, VA</text>
                     <lu className={css(styles.listItems)}>
                         <ul>
@@ -223,7 +251,7 @@ class Resume extends Component {
 
                     </lu>
 
-                    <h3>IT Specialist @ W&M IT Department</h3>
+                    <h3 style = {{color: 'white'}}>IT Specialist @ W&M IT Department</h3>
                     <text  className={css(styles.date)}> March – Nov 2017 // Williamsburg, VA</text>
                     <lu className={css(styles.listItems)}>
                         <ul>
@@ -244,34 +272,35 @@ class Resume extends Component {
                 <div className={css(styles.rightTab)}>
                     <div>
                     <h2 className={css(styles.top)}>SKILLS</h2>
-                    <h3>Programming Languages</h3>
-                    <text>Python, C, C++, JavaScript, Typescript, React Native, React, HTML, CSS/Sass, Node.js, PHP</text>
+                    <h3 style = {{color: 'white'}}>Programming Languages</h3>
+                    <text style = {{color: 'white'}}>Python, C, C++, JavaScript, Typescript, React Native, React, HTML, CSS/Sass, Node.js, PHP</text>
 
-                    <h3>Dev Tools & Environments </h3>
-                    <text>WordPress, Git, GitFlow,
+                    <h3 style = {{color: 'white'}}>Dev Tools & Environments </h3>
+                    <text style = {{color: 'white'}}>WordPress, Git, GitFlow,
                         JetBrains Development Tools, Google Analytics, Adwords, Agile, Photoshop, Microsoft Office
                     </text>
                     </div>
                 <div>
                     <h2 className={css(styles.top)}>EDUCATION</h2>
-                    <h3>William & Mary</h3>
+                    <h3 style = {{color: 'white'}}>William & Mary</h3>
                     <text  className={css(styles.date)}>2015 – 2019 // Williamsburg, VA</text>
-                    <text>BS in Computer Science
+                    <text style = {{color: 'white'}}>BS in Computer Science
                         Sharpe Community Scholar
                     </text>
                 </div>
                     <div>
                         <h2 className={css(styles.top)} >PROJECTS</h2>
-                        <h3>Contech Locker</h3>
-                        <text>Python, C, C++, JavaScript, Typescript, React Native, React, HTML, CSS/Sass, Node.js, PHP</text>
+                        <h3 style = {{color: 'white'}}>Contech Locker</h3>
+                        <text style = {{color: 'white'}}>Python, C, C++, JavaScript, Typescript, React Native, React, HTML, CSS/Sass, Node.js, PHP</text>
 
-                        <h3>React Native Playground </h3>
-                        <text>WordPress, Git, GitFlow,
+                        <h3 style = {{color: 'white'}}>React Native Playground </h3>
+                        <text style = {{color: 'white'}}>WordPress, Git, GitFlow,
                             JetBrains Development Tools, Google Analytics, Adwords, Agile, Photoshop, Microsoft Office
                         </text>
                     </div>
 
 
+                </div>
                 </div>
                 </div>
                 </div>

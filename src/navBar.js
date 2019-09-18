@@ -1,30 +1,24 @@
 import React, { Component ,Text} from 'react';
 import './navBar.css';
 import {StyleSheet, css} from 'aphrodite';
+import {Link } from "react-router-dom";
+import { isMobileOnly} from 'react-device-detect';
+import Hamburger from 'react-hamburgers';
+
 
 var styles = StyleSheet.create( {
     navbar:{
-        marginTop: '10px',
-        marginRight: '10px',
+       
 
-        backgroundColor: "#181818",
-        width: '60px',
-        height: '100%',
+        backgroundColor: "transparent",
         position: 'absolute',
         alignItems: 'center',
         justifyContent: 'center',
-        top: 0,
+        width: '90%',
+        height: '10vh',
         zIndex: 3,
-        'border-top-left-radius': '30px',
-        'border-top-right-radius': '30px',
-        '@media (max-width: 600px)':{
-            width: '95%',
-            height: '60px',
-            'border-top-right-radius': '30px',
-            'border-bottom-left-radius': '30px',
-            'border-bottom-right-radius': '30px',
-
-        }
+        overflow: 'hidden'
+        
 },
     navlogo:{
         marginTop: '0px',
@@ -41,11 +35,12 @@ var styles = StyleSheet.create( {
 
 navbarnav: {
     display: 'flex',
+   
     textAlign: 'center',
     position: 'absolute',
-    flexDirection: 'column',
-    top:'40%',
-    width: '100%',
+    flexDirection: 'row',
+    top:'2.5vh',
+    left: '5vw',
     '@media (max-width: 600px)':{
         flexDirection: 'row',
         paddingLeft: '70px',
@@ -53,10 +48,30 @@ navbarnav: {
         width: '80%',
 
     }
+    
 },
+navbarnavMobile: {
+    display: 'flex',
+    flexDirection: 'row',
+    textAlign: 'center',
+    position: 'absolute',
+    top:'2.5vh',
+    left: '5vw',
+    zIndex: '15',
+    '@media (max-width: 600px)':{
+        flexDirection: 'row',
+        paddingLeft: '70px',
+        top: '5px',
+        width: '80%',
+
+    }
+    
+},
+
 
 navbarnavitem:{
     fontSize: '22px',
+    marginRight: '30px',
     color: '#FFFFFF',
     lineHeight: '51px',
     height: '51px',
@@ -64,7 +79,9 @@ navbarnavitem:{
     textDecoration: 'none',
     backgroundColor: 'transparent',
     textAlign: 'center',
-    margin: 'auto'
+    ':hover':{
+        color: '#F0C760'
+    }
 
 },
 
@@ -80,23 +97,59 @@ navicon:{
 
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state ={
+            visible: false
+        }
+    }
+    toggleMenu(){
+        console.log('updating state')
+        this.setState({
+            visible: !this.state.visible
+        })
+    }
     render() {
-        return (
-            <div className={css(styles.navbar)}>
-                <a href={'./'}>
-               <img className={css(styles.navlogo)} src={'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
-                </a>
-                <div className={css(styles.navbarnav)}>
-                        <a className={css(styles.navbarnavitem)}><i className={'icon ion-ios-home'} style={{fontSize: '40px', color: '#D44A70', textAlign: 'center', paddingRight:0}} ></i></a>
-                        <a className={css(styles.navbarnavitem)}><i className={'icon ion-ios-filing'} style={{fontSize: '40px', color: '#D44A70', textAlign: 'center', paddingRight:0}}></i></a>
-                        <a className={css(styles.navbarnavitem)}><i className={'icon ion-ios-paper'} style={{fontSize: '40px' , color: '#D44A70', textAlign: 'center', paddingRight:0}}></i></a>
+        {console.log("Are we mobile? " + isMobileOnly)}
+        if( !isMobileOnly){
+            return (
+            
+                <div className={css(styles.navbar)}>
 
-
+                    <div className={css(styles.navbarnav)}>
+                            <Link className={css(styles.navbarnavitem)}  to={'./'} >Home</Link>
+                            <Link className={css(styles.navbarnavitem)}  to ={'./projects'}>   Projects   </Link>
+                            <Link className={css(styles.navbarnavitem)}  to={'./hobbies'}>   Hobbies   </Link>
+                            <Link className={css(styles.navbarnavitem)} to={'./resume'}>Resume</Link>
+    
+    
+                    </div>
+    
                 </div>
-
-            </div>
-
-        );
+    
+            );
+        }
+        else{
+            return(
+                <div className={css(styles.navbar)}>
+                    <Hamburger
+                    style ={{width: '100px', height: '100px', backgroundColor: '#FFFFFF', fontSize: '20px' }}
+                    active={this.state.visible}
+                    type="slider"
+                    onClick={() => this.toggleMenu()}/>
+                    {!this.state.visible? null:  <div className={css(styles.navbarnavMobile)}>
+                            <Link className={css(styles.navbarnavitem)}  to={'./'} >Home</Link>
+                            <Link className={css(styles.navbarnavitem)}  to ={'./projects'}>   Projects   </Link>
+                            <Link className={css(styles.navbarnavitem)}  to={'./hobbies'}>   Hobbies   </Link>
+                            <Link className={css(styles.navbarnavitem)} to={'./resume'}>Resume</Link>
+    
+    
+                    </div>}
+                </div>
+            )
+        }
+       
     }
 }
 

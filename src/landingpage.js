@@ -3,8 +3,11 @@ import React, { Component ,Text} from 'react';
 import RCard from './Card';
 import LightSwitcher from "./LightSwitcher";
 import Resume from './resume';
+import NavBar from './navBar';
 import './landingpage.css';
 import {StyleSheet, css} from 'aphrodite';
+import AboutMe from './aboutme';
+import  ContactButton  from './contactButton';
 
 var styles = StyleSheet.create({
     coverContainer:{
@@ -224,10 +227,9 @@ class LandingPage extends Component {
     render() {
         return (
             <div style={{width: '100%'}}>
-                <div style={{overflow: 'hidden', }}>
-                <LightSwitcher/>
-                </div>
-                <img className={css(styles.profileImage)} src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
+                
+               
+                {/*<img className={css(styles.profileImage)} src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/> */}
                 <div className={css(styles.coverContainer)}>
                     <div className={css(styles.coverTextContent)}>
 
@@ -250,6 +252,8 @@ class LandingPage extends Component {
 
 
                         </div>
+
+                        <ContactButton/>
                     </div>
                 <div className={css(styles.coverImageContent)}>
                     <img className={css(styles.northern)} src={'https://isora.me/hire-me/img/etc/northern_lights.png'}/>
@@ -257,12 +261,20 @@ class LandingPage extends Component {
                 </div>
 
             </div>
+
+            <div className={css(styles.sectionBreak)}></div>
+                <div className={css(styles.coverContainer)}>
+                <div className={css(styles.coverTextContent)}>
+                    <AboutMe/>
+                    </div>
+                    </div>
+
                 <div className={css(styles.sectionBreak)}></div>
 
 
 
             <div className={css(styles.projectTextContainer)}>
-                
+
                 <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
                     <h2 className={css(styles.projectHeader)}>FEATURED PROJECTS</h2>
                     <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
@@ -275,11 +287,14 @@ class LandingPage extends Component {
                 <div className={css(styles.projectGalleryContainer)}>
                     <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station'/>
                     <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.'/>
-                     <RCard className={css(styles.noContent)}/>
-
+                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge"/>
+                     <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
+        
                 </div>
 
             </div>
+
+           
 
 
 
