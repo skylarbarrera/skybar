@@ -207,6 +207,25 @@ class Resume extends Component {
                         RELEVENT EXPERIENCE
                     </h2>
 
+
+                    <h3 style = {{color: 'white'}}> Service Design & Lead Developer @ Ferguson Ventures</h3>
+                    <text  className={css(styles.date)} > June – August 2017 // Newport News, VA</text>
+                    <lu className={css(styles.listItems)}>
+                        <ul >
+                            >	Developed a solution to help service contractors maximize billable work hours
+
+                        </ul>
+                        <ul>
+                            >	Conducted industry research and stakeholder interviews, in order to identify customer journey pain points
+
+                        </ul>
+                        <ul>
+                            >	Designed, developed, & presented MVP with profit growth potential of $50+ million dollars
+
+
+                        </ul>
+                    </lu>
+
                     <h3 style = {{color: 'white'}}>Web Master @ MacPaint</h3>
                     <text  className={css(styles.date)} > March – Nov 2017 // Newport News, VA</text>
                     <lu className={css(styles.listItems)}>
@@ -252,7 +271,7 @@ class Resume extends Component {
                     </lu>
 
                     <h3 style = {{color: 'white'}}>IT Specialist @ W&M IT Department</h3>
-                    <text  className={css(styles.date)}> March – Nov 2017 // Williamsburg, VA</text>
+                    <text  className={css(styles.date)}> July 2016 – Dev 2018 // Williamsburg, VA</text>
                     <lu className={css(styles.listItems)}>
                         <ul>
                             >	Manage campus-wide labs ensuring ________                        </ul>

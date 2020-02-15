@@ -104,16 +104,16 @@ class RCard extends Component {
             title: 'Title from props..',
             content: 'Content from props..',
             url: './',
-            gif: 'https://isora.me/hire-me/img/cases/trader0x_website_made.gif'
+            gif: require('/Users/skylarbarrera/Dev/skybar/src/wcwmPortfolio.gif')
         }
     }
 
     render() {
         return (
-
+                //'https://isora.me/hire-me/img/cases/trader0x_website_made.gif'
                 <div className={css(styles.card) }>
                     <a className={css(styles.cardBox) } href={this.props.url } target="_blank">
-                    <img className={css(styles.cardImage) } src={ 'https://isora.me/hire-me/img/cases/trader0x_website_made.gif'} >
+                    <img className={css(styles.cardImage) } src={ this.props.gif} >
                     </img>
                     <div className={css(styles.cardInfo) }>
                         <h3 className={css(styles.cardTitle) }>{this.props.title}</h3>

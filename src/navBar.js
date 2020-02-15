@@ -3,7 +3,7 @@ import './navBar.css';
 import {StyleSheet, css} from 'aphrodite';
 import {Link } from "react-router-dom";
 import { isMobileOnly} from 'react-device-detect';
-import Hamburger from 'react-hamburgers';
+//import Hamburger from 'react-hamburgers';
 
 
 var styles = StyleSheet.create( {
@@ -133,7 +133,7 @@ class Navbar extends Component {
         else{
             return(
                 <div className={css(styles.navbar)}>
-                    <Hamburger
+                    <div
                     style ={{width: '100px', height: '100px', backgroundColor: '#FFFFFF', fontSize: '20px' }}
                     active={this.state.visible}
                     type="slider"
