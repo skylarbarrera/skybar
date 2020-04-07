@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Spotify from './spotify'
 import {StyleSheet, css} from 'aphrodite';
 
 
@@ -34,6 +35,7 @@ class Hobbies extends Component {
             <div>
                 <h1> Music</h1> 
                 <text> Spotify Info/Overview</text>
+                <Spotify/>
             </div>
 
             <div>

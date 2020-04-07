@@ -7,32 +7,26 @@ import LightSwitch from "./lightSwitch99";
 
 
 import { ApolloProvider } from "react-apollo";
-import Navbar from './navBar';
+
 
  class App extends Component{
     
      render() {
            
          return(
-         <ApolloProvider style = {{width: '100vw', height: '100vh'}} client={client}>
+         <ApolloProvider client={client}>
              
-             <Navbar/>
-             <div style={{overflow: 'hidden',zIndex: '4' }}>
+             
+           
                 <LightSwitch>
-                <div>
-               
-               
-                </div>
+                
 
                 </LightSwitch>
-            {/*<LightSwitcher/>*/}
-            <NavRouter>
-
-</NavRouter>
-
+            
+           
              
 
-             </div>
+          
          </ApolloProvider>
      )
      }

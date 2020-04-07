@@ -9,6 +9,7 @@ import navBar from "./navBar"
 import LightSwitch from "./LightSwitch";
 import LightSwitcher from "./LightSwitcher";
 
+//<Route path = "/hobbies" component ={Hobbies}/>
 
 const NavRouter = () => (
     <Switch>
@@ -16,9 +17,8 @@ const NavRouter = () => (
         <Route  path = "/aboutme" component={AboutMe}/>
         <Route path = "/projects" component={Projects}/>
         <Route path = "/resume" component ={Resume}/>
-        <Route path = "/hobbies" component ={Hobbies}/>
-        <Route path = "/switch" component ={LightSwitch}/>
-        <Route path = "/switcher" component ={LightSwitcher}/>
+        
+    
     </Switch>
 )
 

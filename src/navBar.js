@@ -13,10 +13,10 @@ var styles = StyleSheet.create( {
         backgroundColor: "transparent",
         position: 'absolute',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'left',
         width: '90%',
         height: '10vh',
-        zIndex: 3,
+        zIndex: 1,
         overflow: 'hidden'
         
 },
@@ -32,10 +32,9 @@ var styles = StyleSheet.create( {
         }
 
 },
-
 navbarnav: {
     display: 'flex',
-   
+
     textAlign: 'center',
     position: 'absolute',
     flexDirection: 'row',
@@ -67,8 +66,6 @@ navbarnavMobile: {
     }
     
 },
-
-
 navbarnavitem:{
     fontSize: '22px',
     marginRight: '30px',
@@ -82,7 +79,6 @@ navbarnavitem:{
     ':hover':{
         color: '#F0C760'
     }
-
 },
 
 
@@ -101,20 +97,23 @@ class Navbar extends Component {
         super(props);
 
         this.state ={
-            visible: false
+            visible: false,
+            day: this.props.day
         }
     }
     toggleMenu(){
         console.log('updating state')
         this.setState({
-            visible: !this.state.visible
+            visible: !this.state.visible,
         })
     }
     render() {
+        
         {console.log("Are we mobile? " + isMobileOnly)}
+        {console.log("Day?? " + this.state.day)}
         if( !isMobileOnly){
             return (
-            
+                
                 <div className={css(styles.navbar)}>
 
                     <div className={css(styles.navbarnav)}>
@@ -138,14 +137,17 @@ class Navbar extends Component {
                     active={this.state.visible}
                     type="slider"
                     onClick={() => this.toggleMenu()}/>
-                    {!this.state.visible? null:  <div className={css(styles.navbarnavMobile)}>
+                    {!this.state.visible? null :  <div className={css(styles.navbarnavMobile)}>
                             <Link className={css(styles.navbarnavitem)}  to={'./'} >Home</Link>
                             <Link className={css(styles.navbarnavitem)}  to ={'./projects'}>   Projects   </Link>
                             <Link className={css(styles.navbarnavitem)}  to={'./hobbies'}>   Hobbies   </Link>
                             <Link className={css(styles.navbarnavitem)} to={'./resume'}>Resume</Link>
     
-    
+                            
                     </div>}
+                    
+
+                   
                 </div>
             )
         }

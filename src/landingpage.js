@@ -112,15 +112,16 @@ icon:{
 
 projectGalleryContainer:{
         padding: '5% 0%',
+        alignSelf: 'center',
         alignContent: 'center',
         flexDirection: 'row',
         display: '-webkit-box',
         display: '-ms-flexbox',
         display: 'flex',
         overflow: 'scroll',
-        width: '60%',
+        width: '80%',
         paddingBottom: '30px',
-        maxWidth: '1200px',
+        //maxWidth: '1200px',
         zIndex: 2,
 
 
@@ -129,7 +130,6 @@ projectGalleryContainer:{
         flexDirection: 'column',
 
         margin: 'auto'
-
 
     }
 
@@ -194,7 +194,7 @@ projectTextContainer:{
         width: '100%',
         display: 'flex',
         margin: 'auto',
-        flexDirection: 'row',
+        flexDirection: 'column',
         '@media (max-width: 600px)':{
          flexDirection: 'column',
 
@@ -234,7 +234,7 @@ class LandingPage extends Component {
                     <div className={css(styles.coverTextContent)}>
 
                         <h1  className={css(styles.coverTitle)}>Skylar Barrera</h1>
-                        <h2 className={css(styles.coverText)}> Computer Science Student @ William & Mary</h2>
+                        <h2 className={css(styles.coverText)}> Computer Scien</h2>
                         <div className={css(styles.skillsList)}>
 
 
@@ -275,21 +275,26 @@ class LandingPage extends Component {
 
             <div className={css(styles.projectTextContainer)}>
 
+            <h1 style ={{color: 'white', paddingLeft: '20%'}}> Featured Projects</h1>
+                <div className={css(styles.projectGalleryContainer)}>
+                    <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station' gif={require('/Users/skylarbarrera/Dev/skybar/src/wcwmPortfolio.gif')}/>
+                    <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.' gif={require('/Users/skylarbarrera/Dev/skybar/src/rocketPortfolio.gif')}/>
+                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge" gif={require('/Users/skylarbarrera/Dev/skybar/src/contechPortfolio.gif')}/>
+                     <RCard className={css(styles.noContent)} title = 'Project Surf' content="Designed, developed, & presented MVP with profit growth potential of $50+ million dollars for Ferguson Ventures" gif={require('/Users/skylarbarrera/Dev/skybar/src/surfPortfolio.gif')}/>
+                     <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
+        
+                </div>
+
                 <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
-                    <h2 className={css(styles.projectHeader)}>FEATURED PROJECTS</h2>
                     <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
-                    <div style={{margin:'auto', width: '10%',}}>
+                    <div style={{margin:'auto', width: '10%',paddingBottom: '40px'}}>
+                        <a href='https://github.com/skylarbarrera'>
                         <i className="devicon-github-plain-wordmark" style={{fontSize: '4em', color: 'white', margin: 'auto', }}></i>
+                        </a>
+                        
                     </div>
 
 
-                </div>
-                <div className={css(styles.projectGalleryContainer)}>
-                    <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station'/>
-                    <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.'/>
-                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge"/>
-                     <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
-        
                 </div>
 
             </div>
