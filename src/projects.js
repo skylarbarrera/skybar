@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import contechPortfolio from './contechPortfolio.gif'
-import rocketPortfolio from './rocketPortfolio.gif'
-import surfPortfolio from './surfPortfolio.gif'
-import wcwmPortfolio from './wcwmPortfolio.gif'
+import contechPortfolio from './contechportfolio.gif'
+import rocketPortfolio from './rocketportfolio.gif'
+import surfPortfolio from './surfportfolio.gif'
+import wcwmPortfolio from './wcwmportfolio.gif'
 //import rocketPortfolio from './rocketPortfolio.gif'
 //import logo2 from './logo2.png'
 import './App.css';
