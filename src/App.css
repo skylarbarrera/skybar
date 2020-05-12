@@ -8,18 +8,7 @@ body{
     line-height: 1.5;
 
 }
-body:media(max-width: 480px){
-        padding: 70px 50px;
-    }
 
-    @media  (max-width: 550px)
-        body {
-            padding: 120px 50px;
-        }
-        @media  (max-width: 630px)
-            body{
-                padding: 120px 70px;
-            }
 
 .col-centered{
     float: none;
