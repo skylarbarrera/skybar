@@ -1,6 +1,10 @@
 import React, { Component ,Text} from 'react';
 
 import RCard from './Card';
+import contechPortfolio from './contechportfolio.gif'
+import rocketPortfolio from './rocketportfolio.gif'
+import surfPortfolio from './surfportfolio.gif'
+import wcwmPortfolio from './wcwmportfolio.gif'
 import LightSwitcher from "./LightSwitcher";
 import Resume from './resume';
 import NavBar from './navBar';
@@ -274,10 +278,10 @@ class LandingPage extends Component {
 
             <h1 style ={{color: 'white', paddingLeft: '20%'}}> Featured Projects</h1>
                 <div className={css(styles.projectGalleryContainer)}>
-                    <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station' gif={require('/Users/skylarbarrera/Dev/skybar/src/wcwmPortfolio.gif')}/>
-                    <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.' gif={require('/Users/skylarbarrera/Dev/skybar/src/rocketPortfolio.gif')}/>
-                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge" gif={require('/Users/skylarbarrera/Dev/skybar/src/contechPortfolio.gif')}/>
-                     <RCard className={css(styles.noContent)} title = 'Project Surf' content="Designed, developed, & presented MVP with profit growth potential of $50+ million dollars for Ferguson Ventures" gif={require('/Users/skylarbarrera/Dev/skybar/src/surfPortfolio.gif')}/>
+                    <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station' gif={wcwmPortfolio}/>
+                    <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.' gif={rocketPortfolio}/>
+                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge" gif={contechPortfolio}/>
+                     <RCard className={css(styles.noContent)} title = 'Project Surf' content="Designed, developed, & presented MVP with profit growth potential of $50+ million dollars for Ferguson Ventures" gif={surfPortfolio}/>
                      <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
         
                 </div>
