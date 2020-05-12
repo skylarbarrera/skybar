@@ -38,7 +38,7 @@ var styles = StyleSheet.create({
         margin: 'auto',
         padding: '120px 0px',
         overflow: 'auto',
-        width: '60%',
+        width: '50%',
         borderBottomWidth: '5px',
         borderColor: 'white',
 
@@ -249,26 +249,23 @@ class LandingPage extends Component {
                             <i className="devicon-nodejs-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
                             <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '0px'}}></i>
                             <i className={'icon ion-md-add'} style={{fontSize: '2em', color: 'white', paddingRight: '20px', display: 'none'}}></i>
-
+                            <a> hi </a>
 
                         </div>
 
                         <ContactButton/>
                     </div>
-                <div className={css(styles.coverImageContent)}>
-                    <img className={css(styles.northern)} src={'https://isora.me/hire-me/img/etc/northern_lights.png'}/>
+               
+                    <div>
+                    <img  src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
 
-                </div>
+
+                    </div>
 
             </div>
 
             <div className={css(styles.sectionBreak)}></div>
-                <div className={css(styles.coverContainer)}>
-                <div className={css(styles.coverTextContent)}>
-                    <AboutMe/>
-                    </div>
-                    </div>
-
+              <h2>It me a blank section</h2>
                 <div className={css(styles.sectionBreak)}></div>
 
 
