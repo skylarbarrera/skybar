@@ -104,7 +104,7 @@ class RCard extends Component {
             title: 'Title from props..',
             content: 'Content from props..',
             url: './',
-            gif: require('/Users/skylarbarrera/Dev/skybar/src/wcwmPortfolio.gif')
+            gif: ''
         }
     }
 
