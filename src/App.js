@@ -17,6 +17,8 @@ import { ApolloProvider } from "react-apollo";
      componentDidMount(){
          hotjar.initialize(1810823,6);
          ReactGA.initialize('UA-147472951-1');
+         ReactGA.pageview(window.location.pathname);
+
      }
     
      render() {
