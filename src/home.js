@@ -11,8 +11,10 @@ import NavBar from './navBar';
 import './landingpage.css';
 import {StyleSheet, css} from 'aphrodite';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import AboutMe from './aboutme';
 import  ContactButton  from './contactButton';
+import Projects from './projects';
 
 var styles = StyleSheet.create({
     coverContainer:{
@@ -228,78 +230,100 @@ noContent:{
 
 });
 
-class LandingPage extends Component {
+class Home extends Component {
     render() {
         return (
-            <div style={{width: '100%'}}>
+            <div style={{width: '100%' , paddingTop: '100px'}}>
+                
                 
                
                 {/*<img className={css(styles.profileImage)} src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/> */}
                 <div className={css(styles.coverContainer)}>
-                    <div className={css(styles.coverTextContent)}>
+                
+           <Grid 
+           container
+           spacing = {4}
+           direction = "column"
+           alignItems = "center"
+           justify = "center"
+           
+           
+           >
+               <Grid item
+               alignItems="center"
+               spacing= {0}>
+                   <Typography variant ="h1">
+                   Skylar Barrera
+                   </Typography>
+                  <Typography>
+                    Software Developer, Technology Consultant, & Creative Technologist    
+                  </Typography> 
+                  <i className="devicon-javascript-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                  <i className="devicon-nodejs-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                  <i className="devicon-python-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                  <i className="devicon-cplusplus-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                  
+                  <i className="devicon-c-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
+                    <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '0px'}}></i>
+            
+                   
 
-                        <h1  className={css(styles.coverTitle)}>Skylar Barrera</h1>
-                        <h2 className={css(styles.coverText)}> Computer Scien</h2>
-                        <div className={css(styles.skillsList)}>
+               </Grid>
 
-
-                            <i className={"devicon-python-plain"} style={{fontSize: '2em', color: 'white', paddingRight: '20px', '@media (max-width: 600px)':{
-                                    paddingRight: '10px',
-                                    fontSize: '1em'
-
-                                }}}></i>
-                            <i className="devicon-c-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
-                            <i className="devicon-cplusplus-line" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
-                            <i className="devicon-javascript-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
-                            <i className="devicon-nodejs-plain" style={{fontSize: '2em', color: 'white', paddingRight: '20px'}}></i>
-                            <i className={"devicon-react-original"} style={{fontSize: '2em', color: 'white', paddingRight: '0px'}}></i>
-                            <i className={'icon ion-md-add'} style={{fontSize: '2em', color: 'white', paddingRight: '20px', display: 'none'}}></i>
-                            <a> hi </a>
-
-                        </div>
-
-                        <ContactButton/>
-                    </div>
-               
-                    <div>
-                    <img  src = {'https://pbs.twimg.com/profile_images/639081420288208896/pANEqZ4p_400x400.png'}/>
-
-
-                    </div>
-
-            </div>
-
-            <div className={css(styles.sectionBreak)}></div>
-              <h2>It me a blank section</h2>
-                <div className={css(styles.sectionBreak)}></div>
-
-
-
-            <div className={css(styles.projectTextContainer)}>
-
-            <h1 style ={{color: 'white', paddingLeft: '20%'}}> Featured Projects</h1>
-                <div className={css(styles.projectGalleryContainer)}>
+               <Grid item
+               direction = "column"
+               alignItems="center"
+               style={{width: '70%'}}
+               >
+                  <Typography variant ="h2">
+                   Featured Projects
+                   </Typography>
+                <Grid
+                container
+                spacing={3}
+                direction= 'row'
+                justify = "center"
+                >
+                    <Grid item>
                     <RCard title='WCWM' url='https://wcwm.wm.edu' content='Designed & Developed for WCWM, William & Marys College Radio Station' gif={wcwmPortfolio}/>
+
+                    </Grid>
+                    <Grid item>
                     <RCard className={css(styles.noContent)} title='ROCKET MAG' url='http://wmrocketmagazine.com/' content='ROCKET Magazine is the premier fashion publication at The College of William and Mary.' gif={rocketPortfolio}/>
-                     <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge" gif={contechPortfolio}/>
-                     <RCard className={css(styles.noContent)} title = 'Project Surf' content="Designed, developed, & presented MVP with profit growth potential of $50+ million dollars for Ferguson Ventures" gif={surfPortfolio}/>
-                     <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
-        
-                </div>
 
-                <div style={{ backgroundColor: 'transparent', width: '100%', margin: 'auto', maxWidth: '500px'}}>
-                    <h3 className={css(styles.projectHeader)}> OTHER PROJECTS FOUND ON</h3>
-                    <div style={{margin:'auto', width: '10%',paddingBottom: '40px'}}>
-                        <a href='https://github.com/skylarbarrera'>
-                        <i className="devicon-github-plain-wordmark" style={{fontSize: '4em', color: 'white', margin: 'auto', }}></i>
-                        </a>
-                        
-                    </div>
+                    </Grid>
+                    <Grid item>
+                    <RCard className={css(styles.noContent)} title = 'CONTECH' content="Winner of William and Mary & Ferguson's Innovation Challenge" gif={contechPortfolio}/>
+
+                    </Grid>
+                    <Grid item>
+                    <RCard className={css(styles.noContent)} title = 'Project Surf' content="Designed, developed, & presented MVP with profit growth potential of $50+ million dollars for Ferguson Ventures" gif={surfPortfolio}/>
+
+                    </Grid>
+                    <Grid item>
+                    <RCard className={css(styles.noContent)} title='OnKourse'  content='A platform for college student to plan and share course schedules, information, & reviews'/>
+
+                    </Grid>
+                    
 
 
-                </div>
+                </Grid>
+               </Grid>
+
+              
+
+
+           </Grid> 
+       
+                    
 
             </div>
+
+           
+
+            
+
+            
 
            
 
@@ -316,4 +340,4 @@ class LandingPage extends Component {
     }
 }
 
-export default LandingPage;
+export default Home;

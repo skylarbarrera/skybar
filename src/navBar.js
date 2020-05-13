@@ -119,8 +119,9 @@ class Navbar extends Component {
                     <div className={css(styles.navbarnav)}>
                             <Link className={css(styles.navbarnavitem)}  to={'./'} >Home</Link>
                             <Link className={css(styles.navbarnavitem)}  to ={'./projects'}>   Projects   </Link>
-                            <Link className={css(styles.navbarnavitem)}  to={'./hobbies'}>   Hobbies   </Link>
-                            <Link className={css(styles.navbarnavitem)} to={'./resume'}>Resume</Link>
+                            
+                            <a className={css(styles.navbarnavitem)} href={'https://ipfs.io/ipfs/QmYmgFMqK6iTrQaxe7UugWF9UHQavLkpD3YYsaPAe3v66w/SkylarBarrera-Resume.pdf'}>Resume</a>
+    
     
     
                     </div>
@@ -140,8 +141,8 @@ class Navbar extends Component {
                     {!this.state.visible? null :  <div className={css(styles.navbarnavMobile)}>
                             <Link className={css(styles.navbarnavitem)}  to={'./'} >Home</Link>
                             <Link className={css(styles.navbarnavitem)}  to ={'./projects'}>   Projects   </Link>
-                            <Link className={css(styles.navbarnavitem)}  to={'./hobbies'}>   Hobbies   </Link>
-                            <Link className={css(styles.navbarnavitem)} to={'./resume'}>Resume</Link>
+                            
+                            <a className={css(styles.navbarnavitem)} href={'https://ipfs.io/ipfs/QmYmgFMqK6iTrQaxe7UugWF9UHQavLkpD3YYsaPAe3v66w/SkylarBarrera-Resume.pdf'}>Resume</a>
     
                             
                     </div>}
